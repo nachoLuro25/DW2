@@ -1,0 +1,236 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Helvetica Now", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #f4f4f9;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(90deg, #4b6cb7, #182848);
+    padding: 20px 30px;
+}
+
+.logo {
+    width: 120px;
+}
+
+nav {
+    position: relative;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #ffdd57;
+}
+
+.hamburger {
+    display: none;
+    font-size: 30px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+}
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #182848;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 100%;
+    }
+
+    nav ul {
+        display: block;
+        width: 100%;
+    }
+
+    nav li {
+        display: block;
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
+
+section {
+    margin: 50px 25px;
+}
+
+.contenedor_limite {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.contenedor_padre {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    width: 300px;
+    margin: 15px;
+    border: 1px solid #e0e0e0;
+    padding: 15px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: #ffffff;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.card_btn {
+    width: 100px;
+    margin-top: 10px;
+    padding: 10px;
+    background: linear-gradient(90deg, #4b6cb7, #182848);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.card_btn:hover {
+    background: #ffdd57;
+    color: black;
+}
+
+.carrito-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: 10px 5px;
+    width: 300px;
+    height: 90%;
+    background-color: white;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    border-radius: 25px;
+}
+
+.carrito-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.carrito-content h2 {
+    margin-top: 10px;
+}
+
+.carrito-content button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+
+.li_carrito {
+    margin-right: 15px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn_carrito {
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #4b6cb7, #182848);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn_carrito:hover {
+    background: #ffdd57;
+    color: black;
+}
+
+.carritoItems {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 150px;
+    padding: 20px;
+}
+
+.padre_carritoItems {
+    height: 100%;
+    display: flex;
+    padding: 20px;
+}
+
+footer {
+    width: 100%;
+    background: linear-gradient(90deg, #4b6cb7, #182848);
+    padding: 30px;
+}
+
+.padre_footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
